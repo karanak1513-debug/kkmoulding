@@ -1,0 +1,58 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================
+    // PUBLIC READ - All collections visible to everyone
+    // ============================================
+
+    // Products - anyone can read, anyone can write
+    // (Frontend is protected by secret code login)
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Categories - public read, open write
+    match /categories/{categoryId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Gallery images - public read, open write
+    match /gallery/{imageId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Testimonials - public read/write
+    match /testimonials/{testimonialId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Website settings - public read, open write
+    match /website_settings/{settingId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Inquiries - anyone can create (contact form), open read/write
+    match /inquiries/{inquiryId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Contact form submissions - open
+    match /contact_submissions/{submissionId} {
+      allow read: if true;
+      allow write: if true;
+    }
+
+    // Admin profiles - open
+    match /admins/{adminId} {
+      allow read: if true;
+      allow write: if true;
+    }
+  }
+}
