@@ -3,6 +3,8 @@ import { MapPin, Phone, Mail, Clock, ArrowUpRight, MessageSquare } from 'lucide-
 import { BUSINESS_DETAILS } from '../constants';
 import InquiryForm from '../components/InquiryForm';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   const fadeInUp = {
@@ -12,7 +14,39 @@ export default function Contact() {
     transition: { duration: 0.6 }
   };
 
+  const faqSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where is K K Moulding located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are located at B-116, Timber Block, Kirti Nagar, New Delhi, Delhi 110015."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept custom bulk orders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in bulk and custom wooden interior orders for architects, builders, and decorators."
+        }
+      }
+    ]
+  });
+
   return (
+    <>
+    <SEO 
+      title="Contact Us | K K Moulding Kirti Nagar Delhi"
+      description="Contact K K Moulding for premium wooden doors, moulding, and custom interior products. Call us or visit our Kirti Nagar showroom."
+      url="https://k-k-moulding.vercel.app/contact"
+    />
+    <Helmet>
+      <script type="application/ld+json">{faqSchema}</script>
+    </Helmet>
     <div className="bg-brand-light min-h-screen">
       {/* Page Header */}
       <section className="relative bg-brand-dark py-16 text-center text-white" style={{
@@ -165,5 +199,6 @@ export default function Contact() {
         ></iframe>
       </section>
     </div>
+    </>
   );
 }

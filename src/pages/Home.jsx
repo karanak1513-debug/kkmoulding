@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { subscribeProducts, subscribeCategories, subscribeTestimonials, subscribeGallery, subscribePageContent } from '../firebase/db';
 import { BUSINESS_DETAILS } from '../constants';
 import InquiryForm from '../components/InquiryForm';
+import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -55,7 +57,31 @@ export default function Home() {
     transition: { duration: 0.6 }
   };
 
+  const localBusinessSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "K K Moulding",
+    "image": "https://k-k-moulding.vercel.app/og-image.jpg",
+    "description": "Premium wooden moulding, wooden doors, wooden chaukat, HDMR products, and custom wooden interior solutions in Kirti Nagar Delhi.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "B-116, Timber Block, Kirti Nagar",
+      "addressLocality": "New Delhi",
+      "addressRegion": "Delhi",
+      "postalCode": "110015",
+      "addressCountry": "IN"
+    },
+    "telephone": BUSINESS_DETAILS.phone,
+    "url": "https://k-k-moulding.vercel.app",
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 10:00-19:30"
+  });
+
   return (
+    <>
+    <SEO />
+    <Helmet>
+      <script type="application/ld+json">{localBusinessSchema}</script>
+    </Helmet>
     <div className="overflow-x-hidden">
       {/* 1. HERO SECTION */}
       <section className="relative flex min-h-[85vh] items-center justify-center bg-cover bg-center py-20" style={{
@@ -465,5 +491,6 @@ export default function Home() {
         ></iframe>
       </section>
     </div>
+    </>
   );
 }

@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useParams, useNavigate } from 'react-router-dom';
 import { Search, Phone, MessageCircle, FileText, X, Eye, Columns } from 'lucide-react';
 import { subscribeProducts, subscribeCategories } from '../firebase/db';
 import { BUSINESS_DETAILS } from '../constants';
 import InquiryForm from '../components/InquiryForm';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function Products() {
+  const { categorySlug } = useParams();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedCategoryQuery = searchParams.get('category');
+  
+  const parseSlug = (slug) => slug ? slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'All';
 
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState(selectedCategoryQuery || 'All');
+  const [selectedCategory, setSelectedCategory] = useState(categorySlug ? parseSlug(categorySlug) : (selectedCategoryQuery || 'All'));
   
   // Modal State
   const [activeProduct, setActiveProduct] = useState(null);
@@ -33,21 +38,24 @@ export default function Products() {
     };
   }, []);
 
-  // Update category when query param changes
+  // Update category when URL param or query param changes
   useEffect(() => {
-    if (selectedCategoryQuery) {
+    if (categorySlug) {
+      setSelectedCategory(parseSlug(categorySlug));
+    } else if (selectedCategoryQuery) {
       setSelectedCategory(selectedCategoryQuery);
     } else {
       setSelectedCategory('All');
     }
-  }, [selectedCategoryQuery]);
+  }, [categorySlug, selectedCategoryQuery]);
 
   const handleCategorySelect = (categoryName) => {
     setSelectedCategory(categoryName);
     if (categoryName === 'All') {
-      setSearchParams({});
+      navigate('/products');
     } else {
-      setSearchParams({ category: categoryName });
+      const slug = categoryName.toLowerCase().replace(/\s+/g, '-');
+      navigate(`/products/${slug}`);
     }
   };
 
@@ -62,7 +70,21 @@ export default function Products() {
     return matchesSearch && matchesCategory;
   });
 
+  const seoTitle = selectedCategory === 'All' 
+    ? 'Premium Wooden Products | K K Moulding Delhi'
+    : `${selectedCategory} | K K Moulding Delhi`;
+    
+  const seoDescription = selectedCategory === 'All'
+    ? 'Browse our complete catalog of premium wooden moulding, doors, and interior wood products in Kirti Nagar, Delhi.'
+    : `Explore our premium ${selectedCategory} collection. Manufactured at our Kirti Nagar, Delhi facility using high-quality materials.`;
+
   return (
+    <>
+    <SEO 
+      title={seoTitle}
+      description={seoDescription}
+      url={`https://k-k-moulding.vercel.app/products${categorySlug ? `/${categorySlug}` : ''}`}
+    />
     <div className="bg-brand-light min-h-screen pb-24">
       {/* Page Header */}
       <section className="relative bg-brand-dark py-16 text-center text-white" style={{
@@ -318,7 +340,7 @@ export default function Products() {
                     <div className="grid grid-cols-4 gap-2">
                       {activeProduct.galleryImages.map((img, idx) => (
                         <div key={idx} className="h-20 bg-brand-light rounded-lg overflow-hidden border border-brand-wood/10">
-                          <img src={img} alt="" className="h-full w-full object-cover" />
+                          <img src={img} alt={`${activeProduct.name} detail view`} className="h-full w-full object-cover" />
                         </div>
                       ))}
                     </div>
@@ -407,5 +429,6 @@ export default function Products() {
       </AnimatePresence>
 
     </div>
+    </>
   );
 }

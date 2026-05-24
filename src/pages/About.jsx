@@ -2,6 +2,7 @@ import React from 'react';
 import { Award, ShieldCheck, Ruler, Settings, Compass, Landmark } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { BUSINESS_DETAILS } from '../constants';
+import SEO from '../components/SEO';
 
 export default function About() {
   const fadeInUp = {
@@ -12,6 +13,12 @@ export default function About() {
   };
 
   return (
+    <>
+    <SEO 
+      title="About Us | K K Moulding Delhi" 
+      description="Learn about K K Moulding's 15+ year legacy in crafting premium wooden interiors, moulding, and HDMR products in Kirti Nagar, Delhi."
+      url="https://k-k-moulding.vercel.app/about"
+    />
     <div className="bg-brand-light min-h-screen">
       {/* Page Header */}
       <section className="relative bg-brand-dark py-20 text-center text-white" style={{
@@ -208,5 +215,6 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
   );
 }

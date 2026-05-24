@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { subscribeGallery, subscribeCategories } from '../firebase/db';
 import { motion, AnimatePresence } from 'framer-motion';
+import SEO from '../components/SEO';
 
 export default function Gallery() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -61,6 +62,12 @@ export default function Gallery() {
   };
 
   return (
+    <>
+    <SEO 
+      title="Design Gallery | K K Moulding Delhi"
+      description="View our portfolio of wooden moulding, chaukat, and HDMR product installations in Delhi."
+      url="https://k-k-moulding.vercel.app/gallery"
+    />
     <div className="bg-brand-light min-h-screen pb-24">
       {/* Page Header */}
       <section className="relative bg-brand-dark py-16 text-center text-white" style={{
@@ -201,5 +208,6 @@ export default function Gallery() {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 }
