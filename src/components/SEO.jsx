@@ -4,10 +4,10 @@ import { BUSINESS_DETAILS } from '../constants';
 
 export default function SEO({ 
   title = "K K Moulding | Premium Wooden Moulding, Doors & Chaukat Delhi",
-  description = "Premium wooden moulding, wooden doors, wooden chaukat, HDMR products, decorative panels, and custom wooden interior solutions in Kirti Nagar Delhi.",
-  keywords = "wooden moulding delhi, wooden doors delhi, wooden chaukat supplier, HDMR products delhi, decorative wooden panels, wooden interior products india",
+  description = "Premium wooden moulding, wooden doors, wooden chaukat, HDMR products, and custom wooden interior solutions in Kirti Nagar Delhi.",
+  keywords = "wooden moulding delhi, wooden doors delhi, wooden chaukat supplier, HDMR products delhi, decorative wooden panels, wooden interior products india, Wooden Chaukat Manufacturer Delhi, Wooden Door Frame Manufacturer, Wooden Moulding Supplier",
   url = "https://k-k-moulding.vercel.app",
-  image = "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=800&q=80",
+  image = "https://k-k-moulding.vercel.app/og-image.jpg",
   type = "website",
   schema
 }) {
