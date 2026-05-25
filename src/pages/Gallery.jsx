@@ -66,7 +66,7 @@ export default function Gallery() {
     <SEO 
       title="Design Gallery | K K Moulding Delhi"
       description="View our portfolio of wooden moulding, chaukat, and HDMR product installations in Delhi."
-      url="https://k-k-moulding.vercel.app/gallery"
+      url="https://kkmoulding.com/gallery"
     />
     <div className="bg-brand-light min-h-screen pb-24">
       {/* Page Header */}

@@ -17,7 +17,7 @@ export default function About() {
     <SEO 
       title="About Us | K K Moulding Delhi" 
       description="Learn about K K Moulding's 15+ year legacy in crafting premium wooden interiors, moulding, and HDMR products in Kirti Nagar, Delhi."
-      url="https://k-k-moulding.vercel.app/about"
+      url="https://kkmoulding.com/about"
     />
     <div className="bg-brand-light min-h-screen">
       {/* Page Header */}

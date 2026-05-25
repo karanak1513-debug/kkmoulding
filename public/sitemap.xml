@@ -4,55 +4,55 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://k-k-moulding.vercel.app/</loc>
+    <loc>https://www.kkmoulding.com/</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/products</loc>
+    <loc>https://www.kkmoulding.com/products</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/products/wooden-doors</loc>
+    <loc>https://www.kkmoulding.com/products/wooden-doors</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/products/wooden-moulding</loc>
+    <loc>https://www.kkmoulding.com/products/wooden-moulding</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/products/wooden-chaukat</loc>
+    <loc>https://www.kkmoulding.com/products/wooden-chaukat</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/products/hdmr-products</loc>
+    <loc>https://www.kkmoulding.com/products/hdmr-products</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/gallery</loc>
+    <loc>https://www.kkmoulding.com/gallery</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/about</loc>
+    <loc>https://www.kkmoulding.com/about</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://k-k-moulding.vercel.app/contact</loc>
+    <loc>https://www.kkmoulding.com/contact</loc>
     <lastmod>2024-05-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

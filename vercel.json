@@ -1,7 +1,20 @@
 {
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "kkmoulding.com"
+        }
+      ],
+      "destination": "https://www.kkmoulding.com/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!.*\\..*).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],

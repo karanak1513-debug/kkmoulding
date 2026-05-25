@@ -78,12 +78,34 @@ export default function Products() {
     ? 'Browse our complete catalog of premium wooden moulding, doors, and interior wood products in Kirti Nagar, Delhi.'
     : `Explore our premium ${selectedCategory} collection. Manufactured at our Kirti Nagar, Delhi facility using high-quality materials.`;
 
+  const productSchemaList = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": filteredProducts.map((p, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "Product",
+        "name": p.name,
+        "description": p.description || seoDescription,
+        "image": p.mainImage || "https://www.kkmoulding.com/og-image.jpg",
+        "category": p.category,
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "INR"
+        }
+      }
+    }))
+  });
+
   return (
     <>
     <SEO 
       title={seoTitle}
       description={seoDescription}
-      url={`https://k-k-moulding.vercel.app/products${categorySlug ? `/${categorySlug}` : ''}`}
+      url={`https://www.kkmoulding.com/products${categorySlug ? `/${categorySlug}` : ''}`}
+      schema={productSchemaList}
     />
     <div className="bg-brand-light min-h-screen pb-24">
       {/* Page Header */}

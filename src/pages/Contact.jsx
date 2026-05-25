@@ -42,7 +42,7 @@ export default function Contact() {
     <SEO 
       title="Contact Us | K K Moulding Kirti Nagar Delhi"
       description="Contact K K Moulding for premium wooden doors, moulding, and custom interior products. Call us or visit our Kirti Nagar showroom."
-      url="https://k-k-moulding.vercel.app/contact"
+      url="https://kkmoulding.com/contact"
     />
     <Helmet>
       <script type="application/ld+json">{faqSchema}</script>
@@ -137,19 +137,7 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* GST Card */}
-              <div className="bg-white p-6 rounded-xl border border-brand-gold/20 shadow-sm sm:col-span-2">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="inline-block bg-brand-gold/15 text-brand-gold text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-brand-gold/30">
-                    GST Registered
-                  </span>
-                </div>
-                <h3 className="font-serif font-bold text-brand-dark mb-1">GST Number</h3>
-                <p className="text-lg font-mono font-bold text-brand-wood tracking-widest">
-                  07EKZPP3800A1Z2
-                </p>
-                <p className="text-xs text-brand-dark/50 mt-1">State: Delhi (07) • Valid Registration</p>
-              </div>
+
 
             </div>
 

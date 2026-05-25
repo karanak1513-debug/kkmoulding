@@ -61,7 +61,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "K K Moulding",
-    "image": "https://k-k-moulding.vercel.app/og-image.jpg",
+    "image": "https://kkmoulding.com/og-image.jpg",
     "description": "Premium wooden moulding, wooden doors, wooden chaukat, HDMR products, and custom wooden interior solutions in Kirti Nagar Delhi.",
     "address": {
       "@type": "PostalAddress",
@@ -72,7 +72,7 @@ export default function Home() {
       "addressCountry": "IN"
     },
     "telephone": BUSINESS_DETAILS.phone,
-    "url": "https://k-k-moulding.vercel.app",
+    "url": "https://kkmoulding.com",
     "openingHours": "Mo,Tu,We,Th,Fr,Sa 10:00-19:30"
   });
 
@@ -478,6 +478,64 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* NEW: FAQ & DECORATIVE MOULDING SOLUTIONS (SEO) */}
+      <section className="py-24 bg-white border-t border-brand-wood/10">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            {/* Decorative Moulding Content */}
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest text-brand-gold">Interior Design Applications</span>
+              <h2 className="font-serif text-3xl sm:text-4xl text-brand-dark mt-2 mb-6">
+                Decorative Moulding Solutions in Delhi
+              </h2>
+              <p className="text-brand-dark/70 leading-relaxed mb-4">
+                As a leading <strong>decorative moulding manufacturer</strong> and <strong>PVC moulding supplier</strong> in Delhi NCR, K K Moulding provides comprehensive interior moulding solutions. Our products are ideal for luxury homes, commercial spaces, and architectural projects.
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center gap-2 text-sm font-semibold text-brand-dark">
+                  <span className="h-2 w-2 rounded-full bg-brand-wood"></span> Premium wooden patti supplier for wall paneling.
+                </li>
+                <li className="flex items-center gap-2 text-sm font-semibold text-brand-dark">
+                  <span className="h-2 w-2 rounded-full bg-brand-wood"></span> Custom door chaukat manufacturer for robust entryways.
+                </li>
+                <li className="flex items-center gap-2 text-sm font-semibold text-brand-dark">
+                  <span className="h-2 w-2 rounded-full bg-brand-wood"></span> Elegant wooden frame manufacturer serving Kirti Nagar.
+                </li>
+              </ul>
+              <Link
+                to="/products"
+                className="inline-flex items-center gap-2 rounded-full border border-brand-wood/40 px-6 py-2.5 text-sm font-semibold text-brand-wood hover:bg-brand-wood hover:text-white transition-all duration-300"
+              >
+                <span>Explore Full Catalog</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* FAQ */}
+            <div className="bg-brand-beige/20 p-8 rounded-2xl border border-brand-wood/10">
+              <h3 className="font-serif text-2xl font-bold text-brand-dark mb-6">Frequently Asked Questions</h3>
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-brand-dark mb-2">Where is K K Moulding located?</h4>
+                <p className="text-sm text-brand-dark/70">We are a prominent wooden moulding manufacturer located at B-116, Timber Block, Kirti Nagar, New Delhi, serving clients across India.</p>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="font-bold text-brand-dark mb-2">Do you accept custom bulk orders?</h4>
+                <p className="text-sm text-brand-dark/70">Yes, we specialize in bulk and custom wooden interior orders for architects, builders, and decorators. We are a trusted door chaukat manufacturer for large projects.</p>
+              </div>
+
+              <div>
+                <h4 className="font-bold text-brand-dark mb-2">What materials do you use?</h4>
+                <p className="text-sm text-brand-dark/70">We use premium hardwoods, Burma teak, and high-density moisture-resistant (HDMR) materials for all our decorative moulding solutions.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
       {/* 8. GOOGLE MAP SECTION */}
       <section className="w-full h-[450px] relative">

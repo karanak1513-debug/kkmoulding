@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://k-k-moulding.vercel.app/sitemap.xml
+Sitemap: https://www.kkmoulding.com/sitemap.xml
