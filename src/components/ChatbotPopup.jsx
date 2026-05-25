@@ -20,9 +20,8 @@ export default function ChatbotPopup() {
         {isOpen ? <X size={24} /> : <MessageSquare size={24} />}
       </button>
 
-      {/* Chat Window */}
       <div 
-        className={`fixed bottom-[5.5rem] right-2 sm:bottom-[5.5rem] sm:right-6 z-40 w-[calc(100vw-16px)] sm:w-[380px] h-[70vh] sm:h-[550px] max-h-[600px] bg-transparent sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-[5.5rem] right-2 sm:bottom-[5.5rem] sm:right-6 z-40 w-[calc(100vw-16px)] sm:w-[400px] h-[85vh] sm:h-[700px] max-h-[calc(100vh-100px)] bg-transparent sm:rounded-2xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
       >
         <div className="flex-1 w-full bg-white relative overflow-hidden rounded-2xl border border-gray-200">
           {isOpen && (
