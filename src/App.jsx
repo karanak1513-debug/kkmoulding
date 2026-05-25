@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import ChatbotPopup from './components/ChatbotPopup';
 import ProtectedRoute from './components/ProtectedRoute';
 
 // Lazy loaded pages for performance
@@ -59,7 +58,6 @@ function Layout({ children }) {
       <main className="flex-1">{children}</main>
       {!isAdminRoute && <Footer />}
       {!isAdminRoute && <FloatingWhatsApp />}
-      {!isAdminRoute && <ChatbotPopup />}
     </div>
   );
 }
