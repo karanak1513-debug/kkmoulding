@@ -115,11 +115,6 @@ export default function Footer() {
                   className="text-sm text-brand-beige/70 hover:text-white transition-colors duration-300"
                 >
                   {BUSINESS_DETAILS.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-brand-gold font-bold text-xs shrink-0">GST</span>
-                <span className="text-sm text-brand-beige/70 font-mono tracking-wider">{BUSINESS_DETAILS.gst}</span>
               </li>
             </ul>
           </div>
@@ -130,8 +125,6 @@ export default function Footer() {
           <p>© {currentYear} {BUSINESS_DETAILS.name}. All Rights Reserved.</p>
           <div className="flex flex-col md:flex-row items-center gap-2 mt-2 md:mt-0">
             <p>Handcrafted Premium Interior Moldings • Kirti Nagar, Delhi</p>
-            <span className="hidden md:inline text-brand-wood/30">|</span>
-            <p className="text-brand-gold/60 font-mono">GST: {BUSINESS_DETAILS.gst}</p>
           </div>
         </div>
       </div>
