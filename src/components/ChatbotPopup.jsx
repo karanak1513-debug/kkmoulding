@@ -27,9 +27,9 @@ export default function ChatbotPopup() {
         <div className="flex-1 w-full bg-white relative overflow-hidden rounded-2xl border border-gray-200">
           {isOpen && (
             <iframe
-              src="https://www.chatbase.co/chatbot-iframe/84ZsxE9PR-hMzSq6s8V8t"
+              src="https://www.chatbase.co/chatbot-iframe/o9AKty6fSXLJbjftVfMjp"
               width="100%"
-              style={{ height: '100%', minHeight: '500px' }}
+              style={{ height: '100%', minHeight: '700px' }}
               frameBorder="0"
               allow="microphone"
               className="absolute inset-0"
