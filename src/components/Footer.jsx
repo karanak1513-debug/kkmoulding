@@ -115,6 +115,7 @@ export default function Footer() {
                   className="text-sm text-brand-beige/70 hover:text-white transition-colors duration-300"
                 >
                   {BUSINESS_DETAILS.email}
+                </a>
               </li>
             </ul>
           </div>
