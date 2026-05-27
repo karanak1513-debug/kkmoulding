@@ -5,5 +5,5 @@ export const BUSINESS_DETAILS = {
   phone: "+91 9718503557",
   whatsapp: "919718503557",
   email: "k.kmolding5@gmail.com",
-  mapsLink: "https://maps.google.com/?q=B-116+Timber+Block,+Kirti+Nagar,+Delhi,+India",
+  mapsLink: "https://maps.app.goo.gl/zCTxG3eZacy7CWUa8",
 };

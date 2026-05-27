@@ -178,7 +178,7 @@ export default function Contact() {
       {/* Google Map Section */}
       <section className="w-full h-[450px] relative border-t border-brand-wood/10">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.127885068212!2d77.1293306!3d28.6558838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0392d42df7cf%3A0xe54fb72ca35ad7eb!2sB-116%2C%20Timber%20Block%2C%20Kirti%20Nagar%2C%20New%20Delhi%2C%20Delhi%20110015!5e0!3m2!1sen!2sin!4v1716382103498!5m2!1sen!2sin"
+          src="https://maps.google.com/maps?q=28.6373462,77.1368378&hl=en&z=16&output=embed"
           className="w-full h-full border-0 absolute inset-0"
           allowFullScreen=""
           loading="lazy"
